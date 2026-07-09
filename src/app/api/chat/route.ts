@@ -1,7 +1,10 @@
-import { OpenAI } from 'openai';
 import { MENVOTI_SYSTEM_PROMPT } from '@/prompts/systemPrompt';
 
-function getOpenAIClient() {
+// Mark as dynamic to avoid build-time execution
+export const dynamic = 'force-dynamic';
+
+async function getOpenAIClient() {
+  const { OpenAI } = await import('openai');
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     throw new Error('OpenAI API key not configured');
@@ -20,7 +23,7 @@ export async function POST(request: Request) {
       });
     }
 
-    const openai = getOpenAIClient();
+    const openai = await getOpenAIClient();
 
     const formattedMessages = [
       { role: 'system' as const, content: MENVOTI_SYSTEM_PROMPT },
