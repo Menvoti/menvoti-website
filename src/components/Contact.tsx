@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock3, Mail, MapPin, Phone, Sparkles } from 'lucide-react';
 import { useState } from 'react';
+import OpeningHours from './OpeningHours';
 
 const contactDetails = [
   {
@@ -178,6 +179,17 @@ export default function Contact() {
                 </motion.a>
               );
             })}
+
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ duration: 0.45, ease: 'easeOut', delay: contactDetails.length * 0.06 }}
+              whileHover={{ y: -4 }}
+              className="sm:col-span-2"
+            >
+              <OpeningHours variant="card" />
+            </motion.div>
           </div>
         </motion.div>
 

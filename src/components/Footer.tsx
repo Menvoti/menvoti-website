@@ -1,10 +1,11 @@
 import Link from 'next/link';
+import OpeningHours from './OpeningHours';
 
 export default function Footer() {
   return (
     <footer className="border-t border-black/5 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-10 lg:py-20">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
 
           {/* Linke Spalte – Branding */}
           <div>
@@ -44,6 +45,11 @@ export default function Footer() {
                 Köln &amp; Umgebung (bis 60 km)
               </li>
             </ul>
+          </div>
+
+          {/* Öffnungszeiten Spalte */}
+          <div>
+            <OpeningHours variant="list" />
           </div>
 
           {/* Rechte Spalte – Navigation */}
