@@ -37,18 +37,18 @@ export function ChatMessage({ message }: ChatMessageProps) {
       className={`flex ${isAssistant ? 'justify-start' : 'justify-end'} animate-fadeIn`}
     >
       <div
-        className={`max-w-xs lg:max-w-sm px-4 py-3 rounded-lg ${
+        className={`max-w-xs lg:max-w-sm px-5 py-3 rounded-2xl ${
           isAssistant
-            ? 'bg-white text-gray-800 shadow-sm rounded-bl-none'
-            : 'bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-br-none'
+            ? 'bg-white text-slate-800 shadow-sm border border-slate-200/50 rounded-bl-none'
+            : 'bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-br-none shadow-md'
         }`}
       >
-        <p className="text-sm leading-relaxed">
+        <p className="text-sm leading-relaxed font-medium">
           {parseContent(message.content)}
         </p>
         <p
-          className={`text-xs mt-2 ${
-            isAssistant ? 'text-gray-500' : 'text-blue-100'
+          className={`text-xs mt-2 font-medium ${
+            isAssistant ? 'text-slate-500' : 'text-slate-300'
           }`}
         >
           {message.timestamp.toLocaleTimeString('de-DE', {

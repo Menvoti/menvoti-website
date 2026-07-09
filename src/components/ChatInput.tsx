@@ -25,7 +25,7 @@ export function ChatInput({
   return (
     <form
       onSubmit={handleSubmit}
-      className="border-t border-gray-200 bg-white px-4 py-3 flex gap-2"
+      className="flex gap-3 items-center"
     >
       <input
         type="text"
@@ -33,12 +33,12 @@ export function ChatInput({
         onChange={(e) => setInput(e.target.value)}
         placeholder="Schreib eine Nachricht..."
         disabled={isLoading}
-        className="flex-1 bg-gray-100 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+        className="flex-1 bg-slate-100 border border-slate-300/50 rounded-full px-5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-slate-800 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed transition-all font-medium placeholder:text-slate-500 placeholder:font-normal"
       />
       <button
         type="submit"
         disabled={isLoading || !input.trim()}
-        className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full p-2 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+        className="bg-gradient-to-r from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 text-white rounded-full p-2.5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center shadow-md hover:shadow-lg"
         aria-label="Send message"
       >
         {isLoading ? (

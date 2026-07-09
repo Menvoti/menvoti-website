@@ -100,13 +100,14 @@ export function ChatBot() {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center md:bottom-8 md:right-8"
+        className="fixed bottom-6 right-6 z-40 w-16 h-16 rounded-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 hover:from-slate-800 hover:via-slate-700 hover:to-slate-800 text-white shadow-2xl hover:shadow-3xl transition-all duration-500 flex items-center justify-center md:bottom-8 md:right-8 group"
         aria-label="Open chat"
         title="Chat mit MENVOTI AI"
       >
+        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         {isOpen ? (
           <svg
-            className="w-6 h-6"
+            className="w-7 h-7 relative z-10"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -120,7 +121,7 @@ export function ChatBot() {
           </svg>
         ) : (
           <svg
-            className="w-6 h-6"
+            className="w-7 h-7 relative z-10"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -137,16 +138,16 @@ export function ChatBot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 z-40 w-96 h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden md:bottom-32 md:right-8 sm:w-80 sm:h-[500px] sm:bottom-20 sm:right-4">
+        <div className="fixed bottom-24 right-6 z-40 w-96 h-[600px] bg-gradient-to-br from-white via-slate-50 to-slate-100 rounded-3xl shadow-2xl flex flex-col overflow-hidden md:bottom-32 md:right-8 sm:w-80 sm:h-[500px] sm:bottom-20 sm:right-4 border border-slate-200/50 backdrop-blur-xl">
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-4 flex items-center justify-between">
+          <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white px-6 py-5 flex items-center justify-between border-b border-slate-700/50">
             <div>
-              <h3 className="font-bold text-lg">MENVOTI AI</h3>
-              <p className="text-sm text-blue-100">Wir helfen gerne weiter</p>
+              <h3 className="font-bold text-lg tracking-tight">MENVOTI AI</h3>
+              <p className="text-xs text-slate-300 font-medium tracking-wide">Professionelle Beratung</p>
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-white hover:bg-blue-700 rounded-full p-1 transition-colors"
+              className="text-slate-300 hover:text-white hover:bg-slate-700/50 rounded-full p-2 transition-all duration-300"
               aria-label="Close chat"
             >
               <svg
@@ -166,22 +167,22 @@ export function ChatBot() {
           </div>
 
           {/* Messages Container */}
-          <div className="flex-1 overflow-y-auto px-4 py-4 bg-gray-50">
+          <div className="flex-1 overflow-y-auto px-5 py-5 bg-gradient-to-b from-white/80 via-slate-50/50 to-slate-100/30">
             <div className="space-y-4">
               {messages.map((message) => (
                 <ChatMessage key={message.id} message={message} />
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="flex items-center space-x-2 bg-white rounded-lg px-4 py-3 shadow-sm">
+                  <div className="flex items-center space-x-2 bg-white rounded-2xl px-4 py-3 shadow-sm border border-slate-200/50">
                     <div className="flex space-x-1">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-slate-800 rounded-full animate-bounce"></div>
                       <div
-                        className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-slate-800 rounded-full animate-bounce"
                         style={{ animationDelay: '0.1s' }}
                       ></div>
                       <div
-                        className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"
+                        className="w-2 h-2 bg-slate-800 rounded-full animate-bounce"
                         style={{ animationDelay: '0.2s' }}
                       ></div>
                     </div>
@@ -193,12 +194,14 @@ export function ChatBot() {
           </div>
 
           {/* Input Area */}
-          <ChatInput
-            onSendMessage={handleSendMessage}
-            isLoading={isLoading}
-            input={input}
-            setInput={setInput}
-          />
+          <div className="border-t border-slate-200/50 bg-white px-5 py-4">
+            <ChatInput
+              onSendMessage={handleSendMessage}
+              isLoading={isLoading}
+              input={input}
+              setInput={setInput}
+            />
+          </div>
         </div>
       )}
     </>
