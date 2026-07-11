@@ -1,6 +1,6 @@
 'use client';
 
-import Contact from '@/components/Contact';
+import AIAssistantSection from '@/components/AIAssistantSection';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, BedDouble, ChevronDown, CircleCheckBig, Clock3, Cuboid, LampDesk, PackageCheck, Phone, Workflow } from 'lucide-react';
@@ -173,7 +173,7 @@ export default function MöbelmontagePageClient() {
         </div>
       </section>
 
-      <Contact />
+      <AIAssistantSection />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import Contact from '@/components/Contact';
+import AIAssistantSection from '@/components/AIAssistantSection';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, Boxes, ChevronDown, CircleCheckBig, Clock3, PackageCheck, Phone, Sofa, Sparkles, Truck, Waypoints, Wrench, Warehouse } from 'lucide-react';
@@ -156,7 +156,7 @@ export default function UmzugshilfePageClient() {
         </div>
       </section>
 
-      <Contact />
+      <AIAssistantSection />
     </main>
   );
 }

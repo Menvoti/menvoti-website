@@ -1,6 +1,6 @@
 'use client';
 
-import Contact from '@/components/Contact';
+import AIAssistantSection from '@/components/AIAssistantSection';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown, CircleCheckBig, Clock3, Flower2, Leaf, Phone, Scissors, Sparkles, Sprout, Trash2, Trees, Waypoints, Droplets } from 'lucide-react';
@@ -157,7 +157,7 @@ export default function GartenarbeitPageClient() {
         </div>
       </section>
 
-      <Contact />
+      <AIAssistantSection />
     </main>
   );
 }
