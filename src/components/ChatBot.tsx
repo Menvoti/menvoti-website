@@ -17,7 +17,7 @@ export function ChatBot() {
     {
       id: '1',
       role: 'assistant',
-      content: 'Hallo! 👋 Ich bin MENVOTI AI. Wie kann ich dir heute helfen?',
+      content: 'Guten Tag! Ich bin der digitale Rezeptionist von MENVOTI. Womit kann ich Ihnen heute helfen? Wir bieten Möbelmontage, Umzugshilfe, Transporte und Gartenarbeit an.',
       timestamp: new Date(),
     },
   ]);
