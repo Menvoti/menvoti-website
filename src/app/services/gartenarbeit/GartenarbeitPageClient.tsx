@@ -157,7 +157,7 @@ export default function GartenarbeitPageClient() {
         </div>
       </section>
 
-      <AIAssistantSection />
+      <AIAssistantSection initialService="Gartenarbeit" />
     </main>
   );
 }

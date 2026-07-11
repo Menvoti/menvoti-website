@@ -15,13 +15,22 @@ interface Message {
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
-const INITIAL_MESSAGE: Message = {
+const GENERIC_GREETING: Message = {
   id: '1',
   role: 'assistant',
   content:
     'Guten Tag! Ich bin der digitale Rezeptionist von MENVOTI. Womit kann ich Ihnen heute helfen? Wir bieten Möbelmontage, Umzugshilfe, Transporte und Gartenarbeit an.',
   timestamp: new Date(),
 };
+
+function serviceGreeting(service: string): Message {
+  return {
+    id: '1',
+    role: 'assistant',
+    content: `Guten Tag! Gerne nehme ich Ihre **${service}**-Anfrage auf. Wie ist Ihr Vorname?`,
+    timestamp: new Date(),
+  };
+}
 
 const WHY_FEATURES = [
   'Anfrage in ca. 2 Minuten',
@@ -46,8 +55,14 @@ function parseContent(text: string): ReactNode {
 
 // ── Component ─────────────────────────────────────────────────────────────────
 
-export default function AIAssistantSection() {
-  const [messages, setMessages] = useState<Message[]>([INITIAL_MESSAGE]);
+interface Props {
+  initialService?: string;
+}
+
+export default function AIAssistantSection({ initialService }: Props) {
+  const [messages, setMessages] = useState<Message[]>(() =>
+    initialService ? [serviceGreeting(initialService)] : [GENERIC_GREETING]
+  );
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isDone, setIsDone] = useState(false);
@@ -83,10 +98,16 @@ export default function AIAssistantSection() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          messages: [...messages, userMsg].map((m) => ({
-            role: m.role,
-            content: m.content,
-          })),
+          messages: [
+            // Prepend invisible service context so AI skips asking for it
+            ...(initialService
+              ? [{ role: 'user', content: `Ich möchte ${initialService} buchen` }]
+              : []),
+            ...[...messages, userMsg].map((m) => ({
+              role: m.role,
+              content: m.content,
+            })),
+          ],
         }),
       });
 

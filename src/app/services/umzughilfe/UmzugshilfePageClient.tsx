@@ -156,7 +156,7 @@ export default function UmzugshilfePageClient() {
         </div>
       </section>
 
-      <AIAssistantSection />
+      <AIAssistantSection initialService="Umzugshilfe" />
     </main>
   );
 }

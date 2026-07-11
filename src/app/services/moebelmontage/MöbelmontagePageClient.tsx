@@ -173,7 +173,7 @@ export default function MöbelmontagePageClient() {
         </div>
       </section>
 
-      <AIAssistantSection />
+      <AIAssistantSection initialService="Möbelmontage" />
     </main>
   );
 }

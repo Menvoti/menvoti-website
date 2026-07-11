@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { ChatBot } from "@/components/ChatBot";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,8 +14,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MENVOTI | Möbelmontage, Umzugshilfe & mehr",
-  description: "Professionelle Dienstleistungen für Möbelmontage, Transporte, Umzugshilfe und Gartenarbeit in Köln und Umgebung.",
+  title: "MENVOTI | Möbelmontage, Umzugshilfe & mehr in Köln",
+  description: "Professionelle Möbelmontage, Transporte, Umzugshilfe und Gartenarbeit in Köln und Umgebung (bis 60 km). Schnell, zuverlässig und fair.",
+  openGraph: {
+    title: "MENVOTI | Professionelle Dienstleistungen in Köln",
+    description: "Möbelmontage, Transporte, Umzugshilfe und Gartenarbeit in Köln und Umgebung.",
+    type: "website",
+    locale: "de_DE",
+    siteName: "MENVOTI",
+  },
+  twitter: {
+    card: "summary",
+    title: "MENVOTI | Professionelle Dienstleistungen in Köln",
+    description: "Möbelmontage, Transporte, Umzugshilfe und Gartenarbeit in Köln und Umgebung.",
+  },
 };
 
 export default function RootLayout({
@@ -25,12 +37,12 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="de"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         {children}
-        <ChatBot />
+        <WhatsAppButton />
       </body>
     </html>
   );

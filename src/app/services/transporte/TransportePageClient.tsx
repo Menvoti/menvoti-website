@@ -158,7 +158,7 @@ export default function TransportePageClient() {
         </div>
       </section>
 
-      <AIAssistantSection />
+      <AIAssistantSection initialService="Transporte" />
     </main>
   );
 }
