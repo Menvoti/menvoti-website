@@ -4,7 +4,7 @@ import Services from "@/components/Services";
 import WhyUs from "@/components/WhyUs";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
+import AIAssistantSection from "@/components/AIAssistantSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <WhyUs />
       <Process />
       <Testimonials />
-      <Contact />
+      <AIAssistantSection />
       <Footer />
     </main>
   );

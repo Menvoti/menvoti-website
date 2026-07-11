@@ -78,10 +78,10 @@ export default function Testimonials() {
             Google-Bewertungen werden nach den ersten abgeschlossenen Aufträgen veröffentlicht.
           </p>
           <a
-            href="#kontakt"
+            href="#ai-assistant"
             className="inline-flex shrink-0 items-center justify-center rounded-full bg-black px-6 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-black/85"
           >
-            Kontakt aufnehmen
+            Jetzt kostenlos anfragen
           </a>
         </motion.div>
 

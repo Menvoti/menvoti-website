@@ -40,7 +40,7 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
-              href="#kontakt"
+              href="#ai-assistant"
               className="group inline-flex items-center justify-center rounded-full bg-black px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-black/90"
             >
               Kostenloses Angebot

@@ -63,7 +63,7 @@ export default function Footer() {
                 { label: 'Transporte', href: '/services/transporte' },
                 { label: 'Umzugshilfe', href: '/services/umzughilfe' },
                 { label: 'Gartenarbeit', href: '/services/gartenarbeit' },
-                { label: 'Kontakt', href: '/#kontakt' },
+                { label: 'KI-Assistent', href: '/#ai-assistant' },
                 { label: 'Impressum', href: '/impressum' },
                 { label: 'Datenschutz', href: '/datenschutz' },
               ].map((item) => (

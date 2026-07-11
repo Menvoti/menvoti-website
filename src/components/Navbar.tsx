@@ -3,7 +3,7 @@ import Link from "next/link";
 const links = [
   { label: "Leistungen", href: "/#leistungen" },
   { label: "Warum wir", href: "/#warum-wir" },
-  { label: "Kontakt", href: "/#kontakt" },
+  { label: "KI-Assistent", href: "/#ai-assistant" },
 ];
 
 export default function Navbar() {
@@ -23,7 +23,7 @@ export default function Navbar() {
         </nav>
 
         <a
-          href="/#kontakt"
+          href="/#ai-assistant"
           className="rounded-full bg-slate-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-slate-700"
         >
           Angebot anfragen
