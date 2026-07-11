@@ -117,7 +117,7 @@ export default function TransporteLandingClient() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="#kontakt"
+                href="#ai-assistant"
                 className="inline-flex items-center justify-center rounded-full bg-[#111111] px-6 py-3.5 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(0,0,0,0.16)] transition-colors duration-200 hover:bg-black"
               >
                 Kostenloses Angebot
@@ -334,7 +334,7 @@ export default function TransporteLandingClient() {
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
-              href="#kontakt"
+              href="#ai-assistant"
               className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#111111] transition-colors duration-200 hover:bg-gray-100"
             >
               Kostenloses Angebot anfordern

@@ -156,7 +156,7 @@ export default function ImpressumClient() {
               Zur&uuml;ck zur Startseite
             </Link>
             <Link
-              href="/#kontakt"
+              href="/#ai-assistant"
               className="inline-flex items-center justify-center rounded-full border border-black/15 bg-white px-7 py-3.5 text-sm font-semibold text-black transition-all duration-200 hover:bg-black hover:text-white"
             >
               Kontakt aufnehmen

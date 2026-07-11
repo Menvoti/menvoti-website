@@ -52,7 +52,7 @@ export default function UmzugshilfePageClient() {
               Wir helfen Ihnen beim Tragen, Ab- und Aufbau von Möbeln sowie beim sicheren Be- und Entladen – zuverlässig in Köln und bis 60 km Umgebung.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a href="#kontakt" className="inline-flex items-center justify-center rounded-full bg-black px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-black/90">
+                <a href="#ai-assistant" className="inline-flex items-center justify-center rounded-full bg-black px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-black/90">
                 Kostenloses Angebot
               </a>
               <a href="tel:+4917662792171" className="inline-flex items-center justify-center gap-2 rounded-full border border-black/15 bg-white px-7 py-3.5 text-sm font-semibold text-black transition-all duration-200 hover:bg-black hover:text-white">
